@@ -9,6 +9,7 @@ int main() {
         for (int img_idx = 0; img_idx < 5; img_idx++) {
             // Générer le chemin de l'image
             sprintf(command, "/home/elisa_meriem/Work_mlp/mlp_inference /home/elisa_meriem/Work_mlp/testing_bmp/%d/%d_%d.bmp", digit, digit, img_idx);
+            
             // Exécuter mlp_inference avec le chemin de l'image
             int ret = system(command);
             if (ret != 0) {

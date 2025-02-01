@@ -60,8 +60,8 @@ void inference(float *input, float *output)
     float fc2_weights[OUTPUT_SIZE * HIDDEN_SIZE];
     float fc2_biases[OUTPUT_SIZE];
     
-    read_weights_biases("fc1_weights.txt", "fc1_biases.txt", fc1_weights, fc1_biases, INPUT_SIZE, HIDDEN_SIZE);
-    read_weights_biases("fc2_weights.txt", "fc2_biases.txt", fc2_weights, fc2_biases, HIDDEN_SIZE, OUTPUT_SIZE);
+    read_weights_biases("fc1_weights_mlp.txt", "fc1_biases_mlp.txt", fc1_weights, fc1_biases, INPUT_SIZE, HIDDEN_SIZE);
+    read_weights_biases("fc2_weights_mlp.txt", "fc2_biases_mlp.txt", fc2_weights, fc2_biases, HIDDEN_SIZE, OUTPUT_SIZE);
     
     float fc1_output[HIDDEN_SIZE];
     mat_mult(input, fc1_weights, fc1_output, INPUT_SIZE, HIDDEN_SIZE, fc1_biases);
